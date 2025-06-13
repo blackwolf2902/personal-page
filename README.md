@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# 🌐 Arumugam N – Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio! This site showcases my projects, skills, resume, and ways to connect with me.
 
-## Available Scripts
+🔗 **Live Website:** [arumugam.connect](https://blackwolf2902.github.io/personal-page/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a React-based project styled with Tailwind CSS and deployed via GitHub Pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+├── public/
+│   └── resume.pdf
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── App.js
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
 
-### `npm run build`
+- ✨ Responsive personal website
+- 📄 Resume available to view/download
+- 🧠 Projects with AI/ML highlights:
+  - MedBot: AI rover for medicinal plant detection
+  - Heritage Detection using YOLOv8
+  - OrgAssist chatbot for organizations
+  - Voice Cloning AI using TortoiseTTS
+- 🧰 Tech Stack: React, Tailwind CSS, GitHub Pages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/blackwolf2902/personal-page.git
+cd frontend
+yarn install
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠 Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Runs the app in development mode on `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 Deployment (GitHub Pages)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+yarn build
+yarn deploy
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Make sure `package.json` has the correct `homepage`:
 
-### Code Splitting
+```json
+"homepage": "https://blackwolf2902.github.io/personal-page"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🔗 Connect with Me
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 📧 Email: nmaru2904@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/arumugam-nallasivan/)
+- 🐙 [GitHub](https://github.com/blackwolf2902)
+- 🌐 [Portfolio](https://blackwolf2902.github.io/personal-page/)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 License
 
-### Advanced Configuration
+This portfolio is open source and for personal showcasing purposes. Feel free to get inspired, but please do not directly copy content.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
