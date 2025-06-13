@@ -266,7 +266,7 @@ const App = () => {
               View My Work
               <ExternalLink className="inline ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <a href="/resume.pdf"
+            <a href="/personal-page/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="..."
