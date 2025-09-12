@@ -58,12 +58,22 @@ const App = () => {
     { name: 'Machine Learning', icon: Brain, level: 80, color: 'from-purple-400 to-purple-600' },
     { name: 'OpenCV/Computer Vision', icon: Camera, level: 70, color: 'from-blue-400 to-blue-600' },
     { name: 'TensorFlow/PyTorch', icon: Cpu, level: 75, color: 'from-red-400 to-red-600' },
+    { name: 'Generative AI', icon: Code, level: 70, color: 'from-purple-400 to-purple-600' },
     { name: 'SQL/MongoDB', icon: Database, level: 80, color: 'from-cyan-400 to-cyan-600' },
     { name: 'Front-End Development', icon: FolderCode, level: 100, color: 'from-pink-400 to-pink-600' },
     { name: 'Git/Version Control', icon: GitBranch, level: 85, color: 'from-orange-400 to-orange-600' }
   ];
 
   const projects = [
+    {
+      title: 'podCaster - A GenAI powered Podcast Generator',
+      description: 'PodCaster AI is a Django-powered web app that lets you generate podcast scripts using AI and convert them into natural-sounding audio with Piper TTS — all offline and fully customizable.',
+      tech: ['Python', 'Django', 'AI', 'Piper TTS', 'Front-End Development', 'Gemini'],
+      github: 'https://github.com/blackwolf2902/podCaster',
+      image: 'images/pod_logo.png',
+      demo: '#',
+      feature: true
+    },
     {
       title: 'MedBot - AI Medicinal Plant Detection',
       description: 'Autonomous robot using NVIDIA Jetson Nano to identify medicinal plants in remote areas with real-time image classification and deep learning techniques.',
@@ -150,6 +160,12 @@ const App = () => {
   ];
 
   const certifications = [
+    {
+      title: 'Oracle Certified Generative AI Professional',
+      issuer: 'Oracle',
+      date: 'August 2025',
+      description: 'Demonstrated expertise in building generative AI applications using Oracle Cloud Infrastructure'
+    },
     {
       title: 'Natural Language Processing Fundamentals',
       issuer: 'NPTEL',
