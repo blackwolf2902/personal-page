@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This site showcases my projects, skills, resume, and ways to connect with me.
 
-🔗 **Live Website:** [arumugam.connect](https://blackwolf2902.github.io/personal-page/)
+🔗 **Live Website:** [arumugam.qzz.io](https://arumugam.qzz.io/)
 
 ---
 
