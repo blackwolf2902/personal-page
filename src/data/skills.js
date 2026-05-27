@@ -14,7 +14,7 @@ export const skills = [
   {
     name: "HTML/CSS",
     category: "Languages",
-    level: 85,
+    level: 100,
     color: "from-orange-400 to-red-500",
   },
   {
@@ -72,21 +72,27 @@ export const skills = [
     color: "from-violet-400 to-violet-600",
   },
   {
+    name: "AI Assisted Tools (Claude, Codex, etc.)",
+    category: "AI/ML",
+    level: 85,
+    color: "from-violet-400 to-violet-600",
+  },
+  {
     name: "SQL",
     category: "Database",
-    level: 80,
+    level: 85,
     color: "from-blue-400 to-indigo-500",
   },
   {
     name: "MongoDB",
     category: "Database",
-    level: 75,
+    level: 50,
     color: "from-green-400 to-emerald-500",
   },
   {
     name: "Git",
     category: "Tools",
-    level: 85,
+    level: 100,
     color: "from-orange-400 to-red-500",
   },
   {
