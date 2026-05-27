@@ -6,21 +6,18 @@ export const education = [
     period: "2021 - 2025",
     cgpa: "8.6",
     highlights: [
-      "University Rank Holder",
-      "Technical Club Member",
+      "Technical Lab Member",
       "Active in hackathons and technical events",
     ],
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
-    institution: "St. Mary's Matriculation Higher Secondary School",
+    institution: "Tilak Vidhyalaya Higher Secondary School",
     location: "Tirunelveli, Tamil Nadu",
     period: "2019 - 2021",
     percentage: "92%",
     highlights: [
-      "Science Stream",
-      "School Topper",
-      "District Level Olympiad Winner",
+      "Computer Science Stream",
     ],
   },
 ];

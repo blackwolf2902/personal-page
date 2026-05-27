@@ -6,7 +6,7 @@ export const aboutText = [
 
 export const stats = [
   { id: 1, label: "Projects Completed", value: 5, suffix: "+" },
-  { id: 2, label: "AI Models Deployed", value: 3, suffix: "+" },
-  { id: 3, label: "Major Awards Won", value: 3, suffix: "" },
-  { id: 4, label: "CGPA Achieved", value: 8.6, suffix: "" },
+  // { id: 2, label: "AI Models Deployed", value: 3, suffix: "+" },
+  { id: 2, label: "Major Awards Won", value: 3, suffix: "" },
+  { id: 3, label: "CGPA Achieved", value: 8.6, suffix: "" },
 ];

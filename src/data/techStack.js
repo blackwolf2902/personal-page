@@ -17,8 +17,8 @@ export const techStack = [
       { name: "Django", icon: "django", color: "#092E20" },
       { name: "Flask", icon: "flask", color: "#000000" },
       { name: "Tailwind CSS", icon: "tailwindcss", color: "#06B6D4" },
-      { name: "Framer Motion", icon: "framer", color: "#FF0055" },
-      { name: "Next.js", icon: "nextjs", color: "#000000" },
+      // { name: "Framer Motion", icon: "framer", color: "#FF0055" },
+      { name: "NestJS", icon: "nestjs", color: "#000000" },
     ],
   },
   {
