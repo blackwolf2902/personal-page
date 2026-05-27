@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex items-center space-x-2 text-sm text-[var(--color-muted-foreground)]">
             <span>&copy; {new Date().getFullYear()} {profile.name}</span>
             <span className="flex items-center">
-              Built with <Heart className="w-3.5 h-3.5 mx-1 text-red-500" /> using React & Tailwind
+              Built with <Heart className="w-3.5 h-3.5 mx-1 text-red-500 fill-current" />
             </span>
           </div>
 

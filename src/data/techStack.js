@@ -27,7 +27,7 @@ export const techStack = [
       { name: "TensorFlow", icon: "tensorflow", color: "#FF6F00" },
       { name: "PyTorch", icon: "pytorch", color: "#EE4C2C" },
       { name: "OpenCV", icon: "opencv", color: "#5C3EE8" },
-      { name: "scikit-learn", icon: null, color: "#F79320" },
+      { name: "scikit-learn", icon: "scikitlearn", color: "#F79320" },
       { name: "Pandas", icon: "pandas", color: "#150458" },
       { name: "NumPy", icon: "numpy", color: "#013243" },
     ],

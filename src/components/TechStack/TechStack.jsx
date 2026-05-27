@@ -5,10 +5,12 @@ import SectionHeading from '../common/SectionHeading.jsx';
 import GlassCard from '../common/GlassCard.jsx';
 import { techStack } from '../../data/techStack.js';
 
-function TechIcon({ name, icon, color }) {
-  const [failed, setFailed] = useState(false);
+const ICON_SUFFIXES = ['original', 'plain', 'original-wordmark', 'plain-wordmark'];
 
-  if (!icon || failed) {
+function TechIcon({ name, icon, color }) {
+  const [suffixIdx, setSuffixIdx] = useState(0);
+
+  if (!icon || suffixIdx >= ICON_SUFFIXES.length) {
     return (
       <div className="tech-icon relative flex flex-col items-center p-4">
         <div
@@ -29,7 +31,8 @@ function TechIcon({ name, icon, color }) {
     );
   }
 
-  const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}/${icon}-original.svg`;
+  const suffix = ICON_SUFFIXES[suffixIdx];
+  const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}/${icon}-${suffix}.svg`;
 
   return (
     <div className="tech-icon relative flex flex-col items-center p-4">
@@ -38,7 +41,7 @@ function TechIcon({ name, icon, color }) {
           src={iconUrl}
           alt={name}
           className="w-8 h-8 object-contain"
-          onError={() => setFailed(true)}
+          onError={() => setSuffixIdx((i) => i + 1)}
         />
       </div>
       <span className="text-xs text-[var(--color-muted-foreground)] mt-2 font-medium text-center">

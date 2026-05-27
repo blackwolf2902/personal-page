@@ -31,12 +31,12 @@ export default function About() {
                     {profile.location}
                   </span>
                 </div>
-                <div className="flex items-center text-[var(--color-accent)]">
+                {/* <div className="flex items-center text-[var(--color-accent)]">
                   <Award className="w-4 h-4 mr-2" />
                   <span className="text-[var(--color-muted-foreground)]">
                     Patent Holder
                   </span>
-                </div>
+                </div>*/}
               </div>
             </div>
           </AnimatedSection>
