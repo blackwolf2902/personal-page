@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, ExternalLink, ChevronDown, Terminal } from 'lucide-react';
+import { Download, ExternalLink, ChevronDown } from 'lucide-react';
 import AnimatedSection from '../common/AnimatedSection.jsx';
+import Terminal from './Terminal.jsx';
 import { profile } from '../../data/profile.js';
 
 const roles = [
@@ -52,9 +53,8 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <AnimatedSection>
           <div className="flex justify-center items-center space-x-2 mb-6">
-            <Terminal className="w-5 h-5 text-[var(--color-accent)]" />
             <span className="text-[var(--color-accent)] text-sm font-mono">
-              System Ready
+              $ System Ready
             </span>
           </div>
 
@@ -94,6 +94,8 @@ export default function Hero() {
             </a>
           </div>
         </AnimatedSection>
+
+        <Terminal />
 
         <motion.div
           initial={{ opacity: 0 }}

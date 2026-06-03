@@ -19,5 +19,6 @@ export const navItems = [
   { label: "Experience", id: "experience" },
   { label: "Education", id: "education" },
   { label: "Achievements", id: "achievements" },
+  { label: "GitHub", id: "github" },
   { label: "Contact", id: "contact" },
 ];

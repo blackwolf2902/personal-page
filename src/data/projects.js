@@ -10,6 +10,7 @@ export const projects = [
     demo: "#",
     featured: false,
     patent: false,
+    category: "Full Stack",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const projects = [
     image: "/images/pm-bot.png",
     featured: true,
     patent: true,
+    category: "AI/ML",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const projects = [
     image: "/images/voice-ai.jpg",
     featured: false,
     patent: false,
+    category: "AI/ML",
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const projects = [
     image: "/images/orgAssist.png",
     featured: true,
     patent: false,
+    category: "NLP",
   },
   {
     id: 5,
@@ -58,5 +62,6 @@ export const projects = [
     image: "/images/hm-bot.png",
     featured: false,
     patent: false,
+    category: "Computer Vision",
   },
 ];

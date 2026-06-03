@@ -1,12 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import AnimatedSection, { staggerContainer, fadeUpVariants } from '../common/AnimatedSection.jsx';
 import SectionHeading from '../common/SectionHeading.jsx';
 import GlassCard from '../common/GlassCard.jsx';
 import { projects } from '../../data/projects.js';
 
+const categories = ['All', ...new Set(projects.map((p) => p.category))];
+
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filtered = useMemo(
+    () => activeFilter === 'All' ? projects : projects.filter((p) => p.category === activeFilter),
+    [activeFilter]
+  );
+
   return (
     <section id="projects" className="py-20 bg-[var(--color-muted)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,12 +26,34 @@ export default function Projects() {
           />
         </AnimatedSection>
 
-        <AnimatedSection variants={staggerContainer}>
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+        <AnimatedSection>
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
+                  activeFilter === cat
+                    ? 'bg-[var(--color-accent)] text-white'
+                    : 'bg-[var(--color-card)] text-[var(--color-muted-foreground)] border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </AnimatedSection>
+
+        <motion.div layout className="grid md:grid-cols-2 gap-6">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((project) => (
               <motion.div
                 key={project.id}
+                layout
                 variants={fadeUpVariants}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, scale: 0.95 }}
               >
                 <GlassCard
                   hover={true}
@@ -93,8 +124,8 @@ export default function Projects() {
                 </GlassCard>
               </motion.div>
             ))}
-          </div>
-        </AnimatedSection>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

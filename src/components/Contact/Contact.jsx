@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, Github, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Send, Loader2, Copy } from 'lucide-react';
 import AnimatedSection, { staggerContainer, fadeUpVariants } from '../common/AnimatedSection.jsx';
 import SectionHeading from '../common/SectionHeading.jsx';
 import GlassCard from '../common/GlassCard.jsx';
+import { useToast } from '../../context/ToastContext.js';
 import { socialLinks } from '../../data/socialLinks.js';
 
 const iconMap = {
@@ -11,6 +12,7 @@ const iconMap = {
 };
 
 export default function Contact() {
+  const { addToast } = useToast();
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle');
 
@@ -61,31 +63,56 @@ export default function Contact() {
             <div className="space-y-3">
               {socialLinks.map((link, index) => {
                 const Icon = iconMap[link.icon];
+                const isCopyable = link.icon === 'Mail' || link.icon === 'Phone';
+                const handleCopy = isCopyable
+                  ? () => {
+                      navigator.clipboard.writeText(link.value);
+                      addToast('Copied to clipboard!');
+                    }
+                  : null;
+
                 return (
                   <motion.div key={link.label} variants={fadeUpVariants}>
-                    <a
-                      href={link.href}
-                      target={link.icon === 'Mail' || link.icon === 'Phone' ? '_self' : '_blank'}
-                      rel="noopener noreferrer"
-                    >
-                      <GlassCard hover={true} className="p-4 flex items-center gap-4">
+                    {isCopyable ? (
+                      <GlassCard
+                        hover={true}
+                        className="p-4 flex items-center gap-4 cursor-pointer group"
+                        onClick={handleCopy}
+                      >
                         <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-light)] flex items-center justify-center flex-shrink-0">
                           {Icon && <Icon className="w-5 h-5 text-[var(--color-accent)]" />}
                         </div>
-                        <div>
-                          <div className="font-medium text-[var(--color-foreground)] text-sm">
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-[var(--color-foreground)] text-sm truncate">
                             {link.value}
                           </div>
                           <div className="text-xs text-[var(--color-muted-foreground)]">
-                            {link.label === 'Email' ? 'Drop me a line' :
-                             link.label === 'Phone' ? 'Call me directly' :
-                             link.label === 'LinkedIn' ? "Let's connect professionally" :
-                             link.label === 'GitHub' ? 'Check out my code' :
-                             'Connect with me'}
+                            {link.label === 'Email' ? 'Click to copy' : 'Click to copy'}
                           </div>
                         </div>
+                        <Copy className="w-4 h-4 text-[var(--color-muted-foreground)] group-hover:text-[var(--color-accent)] transition-colors flex-shrink-0" />
                       </GlassCard>
-                    </a>
+                    ) : (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <GlassCard hover={true} className="p-4 flex items-center gap-4">
+                          <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-light)] flex items-center justify-center flex-shrink-0">
+                            {Icon && <Icon className="w-5 h-5 text-[var(--color-accent)]" />}
+                          </div>
+                          <div>
+                            <div className="font-medium text-[var(--color-foreground)] text-sm">
+                              {link.value}
+                            </div>
+                            <div className="text-xs text-[var(--color-muted-foreground)]">
+                              {link.label === 'LinkedIn' ? "Let's connect professionally" : 'Check out my code'}
+                            </div>
+                          </div>
+                        </GlassCard>
+                      </a>
+                    )}
                   </motion.div>
                 );
               })}
